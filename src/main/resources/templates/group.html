@@ -5,10 +5,6 @@
     <title>Secret Santa Web Application</title>
 </head>
 <body>
-	<tbody>
-		<tr th:each="person: ${persons}">
-			<td th:text="${person.name}" />
-		</tr>
-	</tbody>
+	<p th:text="'Hello, ' + ${name} + '!'" />
 </body>
 </html>
