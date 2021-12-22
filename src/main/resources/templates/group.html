@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Secret Santa Web Application</title>
+</head>
+<body>
+	<tbody>
+		<tr th:each="person: ${persons}">
+			<td th:text="${person.name}" />
+		</tr>
+	</tbody>
+</body>
+</html>
