@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 @Controller
 public class GroupController {
-	@ModelAttribute("persons")
+	
 	public ArrayList<Person> createGroup() {
 		Group myGroup = new Group();
 		myGroup.addPerson(new Person("Person A"));
@@ -19,12 +19,12 @@ public class GroupController {
 		myGroup.assignPersons();
 		return(myGroup.getPersons());
 	}
-	/*
+	
 	@GetMapping("/group")
 	public String group(Model model) {
-		ArrayList<Person> persons = new ArrayList<Person>();
-		model.addAttribute("persons", persons);
+		ArrayList<Person> persons = createGroup();
+		model.addAttribute("persons", persons.get(0).toString());
 		return "group";
 	}
-	*/
+	
 }

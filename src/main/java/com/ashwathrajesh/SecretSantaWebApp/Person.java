@@ -24,4 +24,8 @@ public class Person {
 	public Person getPersonAssigned() {
 		return(personAssigned);
 	}
+	
+	public String toString() {
+		return(this.name + " is giving a gift to " + this.personAssigned.name);
+	}
 }
