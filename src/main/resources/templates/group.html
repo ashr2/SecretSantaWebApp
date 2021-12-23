@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="stylesheet" href="group.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Secret Santa Web Application</title>
 </head>
 <body>
-	<p th:text="'Hello, ' + ${persons} + '!'" />
+        <table>
+            <tr th:each="person: ${persons}">
+                <td th:text="${person.toString()}"></td>
+            </tr>
+        </table>
 </body>
 </html>

@@ -23,7 +23,7 @@ public class GroupController {
 	@GetMapping("/group")
 	public String group(Model model) {
 		ArrayList<Person> persons = createGroup();
-		model.addAttribute("persons", persons.get(0).toString());
+		model.addAttribute("persons", persons);
 		return "group";
 	}
 	
