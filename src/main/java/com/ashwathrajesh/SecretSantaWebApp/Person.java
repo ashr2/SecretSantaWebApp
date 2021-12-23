@@ -3,20 +3,16 @@ import java.util.ArrayList;
 
 public class Person {
 	private String name;
-	private Person personAssigned;
-	private String message;
+	private Person personAssigned = null;
 
 	//Constructor
 	public Person(String name){
 		this.name = name;
-		this.personAssigned = null;
-		this.message = null;
 	}
 	
 	//Assign this person a person to give gift to 
 	public void setPersonAssigned(Person personAssigned) {
 		this.personAssigned = personAssigned;
-		this.message = this.toString();
 	}
 	
 	//Getter methods
@@ -29,6 +25,6 @@ public class Person {
 	}
 	
 	public String toString() {
-		return(this.name + " is giving a gift to " + this.personAssigned.name);
+		return(this.name + " is giving a gift to " + this.personAssigned.getName());
 	}
 }
